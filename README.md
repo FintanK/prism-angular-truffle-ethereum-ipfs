@@ -82,10 +82,8 @@ Reminder: None of these will work without your Metamask seeds and Infura API key
 You will need to IPFS command line tool installed. In the root directory run the following command..
 
 ```$xslt
-> npm run publish
-added QmWWQSuPMS6aXCbZKpEjPHPUZN2NjB3YrhJTHsV4X3vb2t dist/favicon.ico
-added QmT4AeWE9Q9EaoyLJiqaZuYQ8mJeq4ZBncjjFH9dQ9uDVA dist/index.html
-added QmT9qk3CRYbFDWpDFYeAv8T8H1gnongwKhh5J68NLkLir6 dist/inline.bundle.js
+ipfs add -r dist
+ipfs name publish <hash-generated-from-previous-command>
 ```
 
 In the example above you can see that a hash is generated. You will be able to use this hash to find your app on the distributed network.
@@ -130,6 +128,7 @@ https://ens.readthedocs.io/en/latest/ - Ethereum Name System Documentation. Like
 https://github.com/LedgerHQ/ledger-wallet-api - Ledger Wallet JS API (Appears to be BTC only, can use Ledger Nano to send and receive funds, access account balances etc)
 http://truffleframework.com/tutorials/using-infura-custom-provider - Using Infura with Truffle
 https://github.com/raineorshine/solgraph - Check for security vulnerabilities within your smart contracts.
+https://github.com/diasdavid/ipscend - Publish your static content to IPFS easily.
 
 ## IPFS Public Nodes
 
