@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <img src="https://hints.littlealchemy2.com/icons/315.svg" alt="" width="100" align="center">
+      <h1 style="margin-left:-20px;">Prism</h1>
+      <p>Decentralized Platform and Cryptocurrency Wallet</p>
+      <div class="alert alert-success" *ngIf="connected">
+        {{connected ? 'Connected to ' + networkName + '' : 'No connection to the ' + networkName + ''}}
+      </div>
+      <div class="alert alert-info" *ngIf="status">
+        {{status}}
+      </div>
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Your Wallet Addresses</h2>
+      <ul>
+        <li *ngFor="let account of accounts">{{account}}</li>
+      </ul>
+      <p><strong>Note:</strong> You can generate additional addresses with your wallet client.</p>
+    </div>
+    <div class="col-sm-4">
+      <h1 class="title">Send Coins</h1>
+      <p>
+        Your Account Balance: {{balance}}
+      </p>
+      <form #coinForm="ngForm">
+        <div class="field">
+          <label class="label">Amount</label>
+          <p class="control">
+            <input
+              [(ngModel)]="sendingAmount"
+              class="input"
+              type="text"
+              placeholder="Number of coins"
+              name="sendingAmount"
+              required
+              #sendingAmountModel="ngModel">
+          </p>
+          <div *ngIf="sendingAmountModel.errors && (sendingAmountModel.dirty || sendingAmountModel.touched)"
+               class="help is-danger">
+            <p [hidden]="!sendingAmountModel.errors.required">
+              This field is required
+            </p>
+          </div>
+          <div *ngIf="!sendingAmountModel.errors && (sendingAmountModel.dirty || sendingAmountModel.touched)"
+               class="help is-danger">
+            <p [hidden]="canBeNumber(sendingAmount)">
+              Must be a number
+            </p>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">To Address</label>
+          <p class="control">
+            <input
+              [(ngModel)]="recipientAddress"
+              name="recipientAddress"
+              class="input"
+              type="text"
+              placeholder="Recipient Address"
+              name="recipientAddress"
+              required
+              #recipientAddressModel="ngModel"
+            >
+          </p>
+          <div *ngIf="recipientAddressModel.errors && (recipientAddressModel.dirty || recipientAddressModel.touched)"
+               class="help is-danger">
+            <p [hidden]="!recipientAddressModel.errors.required">
+              This field is required
+            </p>
+          </div>
+          <div *ngIf="!recipientAddressModel.errors && (recipientAddressModel.dirty || recipientAddressModel.touched)"
+               class="help is-danger">
+            <p [hidden]="canBeNumber(recipientAddress)">
+              Must be a number
+            </p>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <p class="control">
+            <button
+              [disabled]="!coinForm.valid"
+              (click)="sendCoin()"
+              class="button is-primary">
+              Send
+            </button>
+          </p>
+        </div>
+      </form>
+      <p>
+        Network Version: {{networkProtocolVersion}} <br/>
+        Coinbase: 0x7f2cf947a62521dc6cb2fa73cc10c54109e78add <br/>
+        Peer Count: {{peerCount}}
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p><strong>Reminder:</strong> Transactions take time to process. You can check the progress of your transactions by clicking the link below</p>
+      <div *ngIf="networkProtocolVersion == 1">
+        <a *ngFor="let account of accounts" href="https://etherscan.io/address/{{account}}" target="_blank">{{account}}</a>
+      </div>
+      <div *ngIf="networkProtocolVersion == 3">
+        <a *ngFor="let account of accounts" href="https://ropsten.etherscan.io/address/{{account}}" target="_blank">{{account}}</a>
+      </div>
+      <div *ngIf="networkProtocolVersion == 4">
+        <a *ngFor="let account of accounts" href="https://rinkeby.etherscan.io/address/{{account}}" target="_blank">{{account}}</a>
+      </div>
+      <div *ngIf="networkProtocolVersion == 42">
+        <a *ngFor="let account of accounts" href="https://kovan.etherscan.io/address/{{account}}" target="_blank">{{account}}</a>
+      </div>
+    </div>
+  </div>
+
+</div>
