@@ -2,7 +2,7 @@
 
 This is an application I've been developing to help me learn more about the Ethereum protocol and DAPP development.
 
-![Screenshot](./Prism_Screenshot/PNG "Screenshot")
+![Screenshot](./Prism_Screenshot.PNG "Screenshot")
 
 This decentralized application uses AngularJS with the truffle framework (smart contract management and deployment).
 
