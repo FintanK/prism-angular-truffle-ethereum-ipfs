@@ -140,3 +140,7 @@ https://github.com/raineorshine/solgraph - Check for security vulnerabilities wi
 
 https://ipfs.io
 https://ipfs.infura.io 
+
+## Donate
+
+0x7f2cf947a62521dc6cb2fa73cc10c54109e78add - Ether
