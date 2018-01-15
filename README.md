@@ -50,7 +50,7 @@ You will need an API key from Infura (provides Ehtereum and IPFS Nodes for your 
 
 When you get your copy put it in ./truffle-config.js
 
-You will also need your seed words in order to deploy contracts using your private keys. Just use the ones from Metamask.
+You will also need your seed words in order to deploy contracts using your private keys. Just use the ones from your Metamask browser extension.
 
 ## Deploying your contracts to the Test and Live Networks
 
@@ -59,10 +59,11 @@ Configuration - ./truffle-config.js
 http://truffleframework.com/tutorials/deploying-to-the-live-network - A guide to deploying contracts with Truffle.
 http://truffleframework.com/tutorials/using-infura-custom-provider - Using a custom provider (In our case Infura).
 
-Take a look at truffle-config.js - this contains all of the different configurations for each network. I decided to use Infura so that I don't have to run nodes locally.
+Take a look at truffle-config.js - this contains all of the different configurations for each network. 
 
-You will need to top up your Ethereum wallet with coins for the test network you choose to use in Metamask. There is a faucet for issuign test coins
-at https://faucet.metamask.io/
+I decided to use Infura so that I don't have to run an Ethereum node locally.
+
+You will need to top up your Ethereum wallet with coins for the test network you choose to use in Metamask. There is a faucet for issuing test coins https://faucet.metamask.io/
 
 ```$xslt
 truffle migrate --network ropsten
@@ -108,13 +109,7 @@ web3.db.putString('testDB', 'key', 'myString') // true
 https://github.com/ethereum/wiki/wiki/Whisper - Whisper Wiki
 https://www.youtube.com/watch?v=koZizelOUeI - Whisper: Achieving Darkness Presentation at DevCon
 
-In short, Whisper is a peer to peer protocol for sending messages over the ethereum network using nodes.
-Each node will try to decrypt the message but will not be successful. The sender and recipient cannot be identified.
-This means that no one will be able to intercept AND decrypt the message.
-
-There are scalability issues that are being worked on. Latency, traffic, processor load and bandwidth.
-
-The recipient is aways trying to decrypt receiving messages. 
+In short, Whisper is a peer to peer protocol for sending messages over the ethereum network anonymously and without censorship.
 
 #### Swarm
 
