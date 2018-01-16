@@ -1,5 +1,7 @@
 # Prism Distributed App (built with Ethereum and IPFS)
 
+https://ipfs.io/ipfs/QmQrPfFovKshKSYCy9kzUs3XPu2NpbqrBcM1HoYytASd9k
+
 This is an application I've been developing to help me learn more about the Ethereum protocol and DAPP development.
 
 ![Screenshot](Prism_Screenshot.PNG "Screenshot")
@@ -84,6 +86,7 @@ You will need to IPFS command line tool installed. In the root directory run the
 ```$xslt
 ipfs add -r dist
 ipfs name publish <hash-generated-from-previous-command>
+ipfs name resolve <hash-generated-from-previous-command>
 ```
 
 In the example above you can see that a hash is generated. You will be able to use this hash to find your app on the distributed network.
