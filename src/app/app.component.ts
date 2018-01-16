@@ -63,7 +63,6 @@ export class AppComponent {
   };
 
   onReady = () => {
-    // Bootstrap the EmeraldCoin Web3 Ethereum Provider
     this.MetaCoin.setProvider(this.web3.currentProvider);
 
     this.web3.eth.estima
@@ -78,7 +77,7 @@ export class AppComponent {
           this.networkName = 'Mainnet';
           break
         case '2':
-          this.networkName = 'Deprectaed Morden Network';
+          this.networkName = 'Deprecated Morden Network';
           break
         case '3':
           this.networkName = 'Ropsten Test Network';
