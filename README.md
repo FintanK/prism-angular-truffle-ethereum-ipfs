@@ -2,6 +2,8 @@
 
 https://ipfs.io/ipfs/QmQrPfFovKshKSYCy9kzUs3XPu2NpbqrBcM1HoYytASd9k
 
+** This app is not deployed on mainnet, use the Ropsten Network **
+
 This is an application I've been developing to help me learn more about the Ethereum protocol and DAPP development.
 
 ![Screenshot](Prism_Screenshot.PNG "Screenshot")
