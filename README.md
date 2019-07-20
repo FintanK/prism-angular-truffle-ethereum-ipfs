@@ -1,16 +1,12 @@
-# Prism Distributed App (built with Ethereum and IPFS)
+# Peer - Browser on the Blockchain, Peer to Peer Chat, Email, Unlimited Storage, Password Manager. 
 
 https://ipfs.io/ipfs/QmQrPfFovKshKSYCy9kzUs3XPu2NpbqrBcM1HoYytASd9k
 
-** This app is not deployed on mainnet, use the Ropsten Network **
+** This app is not deployed on mainnet yet, use the Ropsten Network **
 
-This is an application I've been developing to help me learn more about the Ethereum protocol and DAPP development.
+This decentralized application uses Angular with the Truffle to build on the Ethereum Blockchain (smart contract management and deployment).
 
-![Screenshot](Prism_Screenshot.PNG "Screenshot")
-
-This decentralized application uses AngularJS with the truffle framework (smart contract management and deployment).
-
-Click the link below for a live version on IPFS (Install the metamask chrome extension and choose the Ropsten Test Network)
+Click the link below for a live version on IPFS (Install an IPFS Node and Metamask chrome extension and choose the Ropsten Test Network)
 
 https://ipfs.infura.io/TBD
 
