@@ -66,8 +66,6 @@ export class AppComponent {
   onReady = () => {
     this.MetaCoin.setProvider(this.web3.currentProvider);
 
-    this.web3.eth.estima
-
     // Fetch the network
     this.web3.version.getNetwork((err, netId) => {
 

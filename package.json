@@ -12,7 +12,11 @@
     "lint": "npx ng lint",
     "electron:build": "npx node node_scripts",
     "deploy": "// TODO: Deploy to IPFS and point domain to latest hash",
-    "e2e": "npx cypress open"
+    "e2e": "npx cypress open",
+    "truffle:compile": "npx truffle compile",
+    "truffle:deploy:ropsten": "npx truffle migrate --network ropsten",
+    "truffle:deploy:kovan": "npx truffle migrate --network kovan",
+    "truffle:deploy:tinkeby": "npx truffle migrate --network rinkeby"
   },
   "private": true,
   "dependencies": {
@@ -34,8 +38,10 @@
     "core-js": "^2.4.1",
     "node-sass": "^4.12.0",
     "rxjs": "^5.1.0",
+    "truffle": "^5.0.28",
     "truffle-hdwallet-provider": "0.0.3",
     "web3": "^0.18.4",
+    "webtorrent": "^0.105.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
